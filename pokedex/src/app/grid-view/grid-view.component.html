@@ -1,0 +1,26 @@
+<div class="grid-system">
+    <span>No of pokemons in the list {{pokedoxList['results'].length}}</span>
+    <div class="grid-view">
+        <div class="col-4 " *ngFor="let x of pokedoxList['results'];let i=index">
+            <div class="grids">
+                <div class="view-icon">
+                    <div>
+                    <span class="iconify" data-icon="carbon:view-filled" data-inline="false"></span>
+                    </div>
+                    <div class="ml-3" (click)="deletePokemon(i)">
+                    <span class="iconify" data-icon="carbon:delete" data-inline="false"></span>
+                    </div>
+                </div>
+                <div class="text-center">
+                    
+                    <div>
+                        <img [src]=x.image style="width: 130px;">
+                    </div>
+                    <div class="pokemon-name">
+                        <label>{{x.name}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

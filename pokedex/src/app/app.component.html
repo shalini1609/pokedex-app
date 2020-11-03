@@ -1,0 +1,42 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div>
+  <div>
+    <header class="header">
+      <div class="header-content">
+        <div>
+          <img
+            src="https://lh3.googleusercontent.com/proxy/iqLIzRlZBLRBRI12beK1NZSTy8KfoUODjCa1xL_63teRZn-6GTaggFbJtecd3AvKmZ3WJeL9yv2KRryB2d6nohdMwBnFJMmsUe6Eg-UqaJm-llIQotlfYO41Z3C-jW3bWPKvVA"
+            style="width: 80px;">
+        </div>
+        <div class="ml-auto d-flex align-items-center">
+          <div>
+            <input type="text" placeholder="Search" class="form-control">
+          </div>
+          <div style="font-size: 32px;line-height: 0;">
+            <span (click)="view=0"><span class="iconify ml-4" data-icon="clarity:grid-view-solid"
+                data-inline="false"></span></span>
+
+            <span (click)="view=1"><span class="iconify ml-4" data-icon="clarity:view-list-line"
+                data-inline="false"></span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="body-banner">
+    <div *ngIf="!view">
+      <app-grid-view [pokedoxList]="pokedoxs"></app-grid-view>
+    </div>
+    <div *ngIf="view">
+      <app-list-view [pokedoxList]="pokedoxs"></app-list-view>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
